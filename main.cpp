@@ -1,15 +1,23 @@
 #include <QCoreApplication>
 #include <vector>
+#include <tuple>
+#include <fstream>
+#include <iostream>
+
+const string RESULT_PATH="result.csv";
+const string ROBOT_PATH="robot.md";
+const string TIME_PATH="time.md";
+
 #include "set_robot.hpp"
 #include "set_time.hpp"
 #include "compute_actual_radii.hpp"
 #include "set_sequence.hpp"
 #include "find_contact_points.hpp"
-#include <tuple>
 #include "slipperiness.hpp"
 #include "update_robot.hpp"
-#include <fstream>
-#include <iostream>
+
+
+
 
 int main(int argc, char *argv[])
 {
@@ -46,7 +54,7 @@ int main(int argc, char *argv[])
     set_sequence2(start_times,time_table,rest_radii.size());
 
 
-    std::fstream result_file("RESULT_PATH", std::ios::out|std::ios::trunc);
+    std::fstream result_file(RESULT_PATH, std::ios::out|std::ios::trunc);
     /*We run the simulation*/
     if(result_file)
     {
