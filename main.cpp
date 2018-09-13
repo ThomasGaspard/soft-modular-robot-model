@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
     set_sequence2(start_times,time_table,rest_radii.size());
 
 
-    std::fstream result_file("C:/Users/Home/Documents/model/result.csv", std::ios::out|std::ios::trunc);
+    std::fstream result_file("RESULT_PATH", std::ios::out|std::ios::trunc);
     /*We run the simulation*/
     if(result_file)
     {
