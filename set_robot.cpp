@@ -70,7 +70,7 @@ void set_robot2(std::vector<double>& centers, std::vector<double>& default_radii
      *  15.0 17.0
      *  EOF
      * */
-    std::ifstream robot_file("ROBOT_PATH",std::ios::in);
+    std::ifstream robot_file(ROBOT_PATH,std::ios::in);
     std::string param;
     centers.clear();
     default_radii.clear();
