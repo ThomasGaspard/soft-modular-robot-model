@@ -90,7 +90,7 @@ void set_sequence(std::vector<double>& start_times, std::vector<double>& time_ta
 
 void set_sequence2(std::vector<double>& start_times, std::vector<double>& time_table, unsigned long number_of_modules)
 {
-    std::ifstream robot_file("TIME_PATH",std::ios::in);
+    std::ifstream robot_file(TIME_PATH,std::ios::in);
     std::string param;
     start_times.clear();
     time_table.clear();
